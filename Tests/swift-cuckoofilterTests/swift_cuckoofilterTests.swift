@@ -1,12 +1,13 @@
 import XCTest
 @testable import swift_cuckoofilter
 
-final class swift_cuckoofilterTests: XCTestCase {
+final class CuckooFilterTests: XCTestCase {
     func testExample() {
+        let filter = CuckooFilter<Int>(capacity: 1000)
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(swift_cuckoofilter().text, "Hello, World!")
+        XCTAssertEqual(filter.isEmpty(), true)
     }
 
     static var allTests = [
